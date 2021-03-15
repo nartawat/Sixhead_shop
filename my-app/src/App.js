@@ -1,4 +1,3 @@
-import logo from "./logo.svg";
 import "./App.css";
 import { useState } from "react";
 import {
@@ -8,7 +7,6 @@ import {
   Col,
   Card,
   Button,
-  Pagination,
 } from "react-bootstrap";
 
 
@@ -18,16 +16,6 @@ function App() {
   const handleSelect = (selectedIndex, e) => {
     setIndex(selectedIndex);
   };
-
-  let active = 1;
-  let items = [];
-  for (let number = 1; number <= 6; number++) {
-    items.push(
-      <Pagination.Item key={number} active={number === active}>
-        {number}
-      </Pagination.Item>
-    );
-  }
   return (
     <div className="App">
       <Carousel activeIndex={index} onSelect={handleSelect}>
@@ -243,8 +231,6 @@ function App() {
             </Card>
           </Col>
         </Row>
-
-        <Pagination className="Pagin"> {items}</Pagination>
       </Container>
       <Card className="text-center">
         <Card.Header>Make By : Nartawat </Card.Header>
