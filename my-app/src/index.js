@@ -7,6 +7,7 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import MyNavbar from "./components/MyNavbar"
 import MyItem from "./components/MyItem"
+import FormRegister from "./components/FormRegister"
 
 ReactDOM.render(
   <React.StrictMode>
@@ -15,6 +16,7 @@ ReactDOM.render(
           <Switch>
             <Route exact path="/" component={App}/>
             <Route path="/myitem" component={MyItem}/> 
+            <Route path="/formregister" component={FormRegister}/> 
             
 
           </Switch>
