@@ -5,10 +5,20 @@ import App from "./App";
 import reportWebVitals from "./reportWebVitals";
 import "bootstrap/dist/css/bootstrap.min.css";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+import MyNavbar from "./components/MyNavbar"
+import MyItem from "./components/MyItem"
 
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+              <Router> 
+          <MyNavbar />
+          <Switch>
+            <Route exact path="/" component={App}/>
+            <Route path="/myitem" component={MyItem}/> 
+            
+
+          </Switch>
+      </Router>
   </React.StrictMode>,
   document.getElementById("root")
 );
